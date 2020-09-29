@@ -25,6 +25,8 @@ import AddIcon from '@material-ui/icons/Add';
 import EditIcon from '@material-ui/icons/Edit';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
+import "./ContentStyle.css";
+
 // スタイルを適用する
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -44,12 +46,14 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function List() {
 
-    const itemList = ['a', 'b', 'c']
+    const itemList = ['aaaaaaaaaa', 'b', 'cccc']
   
     return (
-      <ul>
-        <For of={itemList}>{item => <li>{item}</li>}</For>
+      
+      <ul id="c2">
+      <For of={itemList}>{item => <li>{item}</li>}</For>
       </ul>
+      
     )
   }
 
@@ -77,7 +81,7 @@ function MainContent() {
                 </Button>
             </Paper>
           </Grid>
-          <Grid item xs={12} justify="center" >
+          <Grid item xs={12}>
             <Paper variant="outlined" elevation={3} className={classes.paper}>
                 <h3><List /></h3>
             </Paper>
