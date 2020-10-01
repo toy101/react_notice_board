@@ -8,7 +8,8 @@ import {
   Paper,
   Button,
   Fab,
-  Grid
+  Grid,
+  TextField
 } from '@material-ui/core';
 
 // Material-UIアイコン取得
@@ -46,10 +47,17 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function List() {
 
-    const itemList = ['aaaaaaaaaa', 'b', 'cccc']
+    const itemList = [
+          'GCCEのパワポ作成',
+          '研究の実装', 
+          'サーバーの管理'
+        ]
+
+    const subtitle = `ToDo`
   
     return (
       
+
       <ul id="c2">
       <For of={itemList}>{item => <li>{item}</li>}</For>
       </ul>
